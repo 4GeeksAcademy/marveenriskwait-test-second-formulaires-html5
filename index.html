@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- document -->
+    <div class="container">
+
+
+
+        <!-- Card  -->
+        <div class="card mt-3">
+            <!--Card Header -->
+            <div class="card-header">
+                <h1> Payment form example </h1>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body bg-body-tertiary">
+                <!-- Alert closable-->
+                <div id="my-alert" class="alert alert-danger d-flex justify-content-between" role="alert">
+                    <p>Some fields are missing</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert"
+                        aria-label="Close"></button>
+                </div>
+                <!-- Payment card infos -->
+
+                <form>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+
+
+                                <!-- I do both in text because it looks better and as you said in class, better for this kind of infos -->
+
+
+                                <!-- card number -->
+                                <label for="cardNumber" class="form-label">Card #</label>
+                                <input type="text" class="form-control" id="cardNumber" minlength="16" maxlength="16"
+                                    placeholder="1234567890123456" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <!-- cvc number -->
+                                <label for="cvc" class="form-label">CVC #</label>
+                                <input type="text" class="form-control" id="cvc" minlength="3" maxlength="4"
+                                    placeholder="123" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="amount" class="form-label">Amount</label>
+                                <input type="number" class="form-control" id="amount" min="0" max="999999"
+                                    placeholder="$" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Client informations: FirstName/ city-->
+                    <div class="row d-flex">
+                        <div class="col-sm-12 col-md-6 d-block">
+                            <!-- name -->
+                            <label class="form-label" for="fname">First Name</label>
+                            <br>
+                            <input class="my-2 form-control" type="text" name="fname" id="fname" value=""
+                                placeholder="Your Name">
+                            <br>
+                            <!-- city -->
+                            <label class="form-label" for="city">City</label>
+                            <br>
+                            <input class="my-2 form-control" type="text" name="city" id="city" value=""
+                                placeholder="Your city">
+                        </div>
+
+                        <!-- Client information LastName / State - PostalCode / Message -->
+                        <div class="col-sm-12 col-md-6 d-block">
+                            <label class="form-label" for="lname">Last Name</label>
+                            <br>
+                            <input class="my-2 form-control" type="text" name="lname" id="lname" value=""
+                                placeholder="Your Last Name">
+
+                            <!-- State / postalCode -->
+                            <div class="row my-2 align-items-center">
+                                <!-- State 150 contrys chose yours! :) -->
+                                <div class="col-sm-12 col-md-6 my-2">
+                                    <label class="form-label my-2" for="state">State</label>
+                                    <br>
+                                    <select class="my-2 form-select" name="state" id="state">
+                                        <option selected>Your State</option>
+                                        <option value="afghanistan">Afghanistan</option>
+                                        <option value="south_africa">Afrique du Sud</option>
+                                        <option value="albania">Albanie</option>
+                                        <option value="algeria">Algérie</option>
+                                        <option value="germany">Allemagne</option>
+                                        <option value="andorra">Andorre</option>
+                                        <option value="angola">Angola</option>
+                                        <option value="saudi_arabia">Arabie Saoudite</option>
+                                        <option value="argentina">Argentine</option>
+                                        <option value="armenia">Arménie</option>
+                                        <option value="australia">Australie</option>
+                                        <option value="austria">Autriche</option>
+                                        <option value="azerbaijan">Azerbaïdjan</option>
+                                        <option value="bahamas">Bahamas</option>
+                                        <option value="bahrain">Bahreïn</option>
+                                        <option value="bangladesh">Bangladesh</option>
+                                        <option value="belgium">Belgique</option>
+                                        <option value="benin">Bénin</option>
+                                        <option value="belarus">Biélorussie</option>
+                                        <option value="bolivia">Bolivie</option>
+                                        <option value="bosnia_herzegovina">Bosnie-Herzégovine</option>
+                                        <option value="botswana">Botswana</option>
+                                        <option value="brazil">Brésil</option>
+                                        <option value="bulgaria">Bulgarie</option>
+                                        <option value="burkina_faso">Burkina Faso</option>
+                                        <option value="burundi">Burundi</option>
+                                        <option value="cambodia">Cambodge</option>
+                                        <option value="cameroon">Cameroun</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="chile">Chili</option>
+                                        <option value="china">Chine</option>
+                                        <option value="cyprus">Chypre</option>
+                                        <option value="colombia">Colombie</option>
+                                        <option value="south_korea">Corée du Sud</option>
+                                        <option value="costa_rica">Costa Rica</option>
+                                        <option value="ivory_coast">Côte d’Ivoire</option>
+                                        <option value="croatia">Croatie</option>
+                                        <option value="cuba">Cuba</option>
+                                        <option value="denmark">Danemark</option>
+                                        <option value="djibouti">Djibouti</option>
+                                        <option value="dominica">Dominique</option>
+                                        <option value="egypt">Égypte</option>
+                                        <option value="united_arab_emirates">Émirats arabes unis</option>
+                                        <option value="ecuador">Équateur</option>
+                                        <option value="spain">Espagne</option>
+                                        <option value="estonia">Estonie</option>
+                                        <option value="united_states">États-Unis</option>
+                                        <option value="ethiopia">Éthiopie</option>
+                                        <option value="finland">Finlande</option>
+                                        <option value="france">France</option>
+                                        <option value="gabon">Gabon</option>
+                                        <option value="georgia">Géorgie</option>
+                                        <option value="ghana">Ghana</option>
+                                        <option value="greece">Grèce</option>
+                                        <option value="guatemala">Guatemala</option>
+                                        <option value="guinea">Guinée</option>
+                                        <option value="haiti">Haïti</option>
+                                        <option value="honduras">Honduras</option>
+                                        <option value="hungary">Hongrie</option>
+                                        <option value="india">Inde</option>
+                                        <option value="indonesia">Indonésie</option>
+                                        <option value="ireland">Irlande</option>
+                                        <option value="iceland">Islande</option>
+                                        <option value="israel">Israël</option>
+                                        <option value="italy">Italie</option>
+                                        <option value="japan">Japon</option>
+                                        <option value="kazakhstan">Kazakhstan</option>
+                                        <option value="kenya">Kenya</option>
+                                        <option value="kuwait">Koweït</option>
+                                        <option value="latvia">Lettonie</option>
+                                        <option value="lebanon">Liban</option>
+                                        <option value="lithuania">Lituanie</option>
+                                        <option value="luxembourg">Luxembourg</option>
+                                        <option value="madagascar">Madagascar</option>
+                                        <option value="malaysia">Malaisie</option>
+                                        <option value="morocco">Maroc</option>
+                                        <option value="mexico">Mexique</option>
+                                        <option value="moldova">Moldavie</option>
+                                        <option value="monaco">Monaco</option>
+                                        <option value="mongolia">Mongolie</option>
+                                        <option value="nepal">Népal</option>
+                                        <option value="nicaragua">Nicaragua</option>
+                                        <option value="niger">Niger</option>
+                                        <option value="nigeria">Nigéria</option>
+                                        <option value="norway">Norvège</option>
+                                        <option value="new_zealand">Nouvelle-Zélande</option>
+                                        <option value="oman">Oman</option>
+                                        <option value="uganda">Ouganda</option>
+                                        <option value="pakistan">Pakistan</option>
+                                        <option value="panama">Panama</option>
+                                        <option value="paraguay">Paraguay</option>
+                                        <option value="netherlands">Pays-Bas</option>
+                                        <option value="peru">Pérou</option>
+                                        <option value="philippines">Philippines</option>
+                                        <option value="poland">Pologne</option>
+                                        <option value="portugal">Portugal</option>
+                                        <option value="qatar">Qatar</option>
+                                        <option value="czech_republic">République tchèque</option>
+                                        <option value="romania">Roumanie</option>
+                                        <option value="united_kingdom">Royaume-Uni</option>
+                                        <option value="russia">Russie</option>
+                                        <option value="rwanda">Rwanda</option>
+                                        <option value="senegal">Sénégal</option>
+                                        <option value="serbia">Serbie</option>
+                                        <option value="singapore">Singapour</option>
+                                        <option value="slovakia">Slovaquie</option>
+                                        <option value="slovenia">Slovénie</option>
+                                        <option value="somalia">Somalie</option>
+                                        <option value="sri_lanka">Sri Lanka</option>
+                                        <option value="sweden">Suède</option>
+                                        <option value="switzerland">Suisse</option>
+                                        <option value="thailand">Thaïlande</option>
+                                        <option value="tunisia">Tunisie</option>
+                                        <option value="turkey">Turquie</option>
+                                        <option value="ukraine">Ukraine</option>
+                                        <option value="uruguay">Uruguay</option>
+                                        <option value="venezuela">Venezuela</option>
+                                        <option value="vietnam">Vietnam</option>
+                                        <option value="yemen">Yémen</option>
+                                        <option value="zambia">Zambie</option>
+                                        <option value="zimbabwe">Zimbabwe</option>
+                                    </select>
+                                </div>
+                                <!-- Postal code -->
+                                <div class="col-sm-12 col-md-6">
+                                    <label class="form-label my2" for="PostalCode">Postal code</label>
+                                    <br>
+                                    <input class="my-2 form-control" type="text" name="PostalCode" id="PostalCode"
+                                        value="" placeholder="8767">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Radio Cards types / Message -->
+
+                    <!-- Podia hacerlo en los divs de first name y last name, es por elección personal que lo hago aqui, porque me parece igual mas o menos -->
+                    <div class="row d-flex fs-5">
+                        <!-- cards type -->
+                        <div class="col-sm-12 col-md-6">
+                            <label class="ms-5" for="payment">Pay by:</label>
+                            <br>
+                            <button class="btn btn-secondary ms-4">
+                                <input class="mx-1" type="radio" name="payment"><i
+                                    class="fa-brands fa-paypal"></i></input>
+                                <input class="mx-1" type="radio" name="payment"><i
+                                    class="fa-brands fa-apple-pay"></i></input>
+                                <input class="mx-1" type="radio" name="payment"><i
+                                    class="fa-brands fa-cc-mastercard"></i></input>
+                                <input class="mx-1" type="radio" name="payment"><i
+                                    class="fa-brands fa-cc-visa"></i></input>
+                            </button>
+                        </div>
+                        <!-- Messages -->
+
+
+                        <div class="col-sm-12 col-md-6 ">
+                            <label for="message">Message:</label>
+                            <textarea class="form-control" placeholder="Type your message here..." id="message"
+                                style="height: 120px;"></textarea>
+                        </div>
+
+                    </div>
+            </div>
+
+
+            
+            
+            
+            <!-- Reset && submit -->
+            
+            
+            <div class="card-footer text-body-secondary d-flex justify-content-end ">
+                
+                <input class="btn btn-secondary me-2" type="reset" name="cancel" value="Cancel"></input>
+                
+                
+                
+                
+                <input class="btn btn-success" type="submit" name="send" value="Send"></input>
+                
+            </div>
+        </div>
+    </div>
+
+    </form>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
